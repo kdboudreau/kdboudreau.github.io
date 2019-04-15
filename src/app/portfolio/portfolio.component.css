@@ -1,0 +1,13 @@
+.portfolio-h2 {
+  padding: 30px;
+  vertical-align: top;
+  font-size: 18px;
+}
+.portfolio-h2::first-line {
+  font-variant-caps: small-caps;
+  font-size: 22px;
+}
+.portfolio-div {
+  padding: 0 30px 30px 30px;
+  color: #737373;
+}

@@ -1,0 +1,22 @@
+@media screen and (max-device-width: 999px) {
+  .page-layout {
+    width: 100%;
+    height:100%
+  }
+}
+
+@media screen and (min-device-width: 1000px) {
+  .page-layout {
+    width: 49%;
+    height:100%;
+    display: inline-block;
+  }
+}
+
+ div {
+   font-family: 'adriane', Georgia, serif;
+ }
+
+app-root, app-header {
+  height: 100%;
+}
