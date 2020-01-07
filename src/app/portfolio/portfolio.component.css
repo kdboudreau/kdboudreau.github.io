@@ -8,7 +8,23 @@
   font-size: 30px;
 }
 .portfolio-div {
+  padding: 0 60px 30px 60px;
+  color: #737373;
+  font-size: 18px;
+}
+.portfolio-links {
   padding: 0 60px 60px 60px;
   color: #737373;
   font-size: 18px;
+  white-space: nowrap;
+}
+.portfolio-links div {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.portfolio-links div:first-child {
+  display: block;
+  width: 100%;
+  padding: 0 0 20px 0;
 }
