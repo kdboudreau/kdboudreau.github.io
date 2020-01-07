@@ -27,5 +27,5 @@ app-root, app-header, app-portfolio {
 
 .page-layout {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
