@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0px;
+	white-space: nowrap;
+	width: 100vw;
+	overflow-x: hidden;
+}
+app-root {
+	white-space: nowrap;
+	width: 100vw;
+}
+h1 {
+	display: block;
+    font-size: 40px;
+    width: 100%;
+    padding: 0 0 20px 0;
+	text-align: center;
+	color: #006D05;
+}
