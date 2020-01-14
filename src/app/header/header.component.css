@@ -6,6 +6,10 @@
   text-align: left;
 }
 
+div {
+  height: 100%;
+}
+
 @media screen and (max-device-width: 999px) {
-  max-height: 400px;
+  
 }
