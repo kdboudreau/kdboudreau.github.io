@@ -18,16 +18,14 @@
 .footer-component > div > a {
     display: inline-block;
     width: 10%;
-    margin: 5%;
+    margin: 0px 5%;
     text-align: center;
     font-size: 0px;
 }
-
 .footer-component > div > a > i {
     color: black;
     font-size: 36px;
 }
-
 .footer-component > div > a > img {
     height: 48px;
     margin-top: -17px;
