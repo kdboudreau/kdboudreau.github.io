@@ -1,16 +1,12 @@
 @media screen and (max-device-width: 999px) {
-  app-header, app-portfolio {
+  app-portfolio {
     width: 100%;
   }
 }
 
 @media screen and (min-device-width: 1000px) {
-  app-root {
-    white-space: nowrap;
-  }
-
-  app-header, app-portfolio {
-    width: 50%;
+  app-portfolio {
+    width: 100%;
     display: inline-block;
     vertical-align: top;
     white-space: normal;
@@ -21,11 +17,23 @@ div {
    font-family: 'adriane', Georgia, serif;
 }
 
-app-root, app-header, app-portfolio {
-  height: 100%;
+app-portfolio {
+  height: 100vh;
 }
 
-.page-layout {
-  width: 100%;
-  /* height: 100%; */
+app-content, app-footer, app-portfolio {
+  display: block;
+  width: 100vw;
+}
+
+app-footer {
+  background-color: black;
+}
+
+app-portfolio {
+  white-space: nowrap;
+  background-image: url("assets/images/KathrynEngagement.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
