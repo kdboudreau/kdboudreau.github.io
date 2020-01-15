@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-device-width: 600px) {
+	h1 {
+		font-size: 24px;
+		margin: 0px;
+	}
+	h2 {
+		margin: 0px;
+	}
+}
+
+@media screen and (min-device-width: 601px) {
+	h1 {
+		font-size: 40px;
+	}
+}
 body {
 	margin: 0px;
 	white-space: nowrap;
@@ -11,7 +25,6 @@ app-root {
 }
 h1 {
 	display: block;
-    font-size: 40px;
     width: 100%;
     padding: 0 0 20px 0;
 	text-align: center;
