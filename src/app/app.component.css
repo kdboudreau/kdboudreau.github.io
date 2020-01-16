@@ -2,10 +2,11 @@
   app-header {
     display: block;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
   }
   app-portfolio {
     width: 100%;
+    /* background-image: url("assets/images/KathrynEngagement.jpg"); */
   }
 }
 

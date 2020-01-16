@@ -5,10 +5,15 @@
   }
   .portfolio-h2 {
     padding: 20px;
+    font-size: 22px;
     color: #006D05;
+  }
+  .portfolio-h2::first-line {
+    font-size: 26px;
   }
   .portfolio-div {
     padding: 0px 20px 20px 20px;
+    font-size: 16px;
   }
 }
 
@@ -21,9 +26,14 @@
   .portfolio-h2 {
     margin-top: 60px;
     padding: 30px 60px;
+    font-size: 30px;
+  }
+  .portfolio-h2::first-line {
+    font-size: 32px;
   }
   .portfolio-div {
     padding: 30px 60px;
+    font-size: 20px;
   }
   .component-layout {
     background: rgba(255, 255, 255, .1);
@@ -33,6 +43,7 @@
   }
   .portfolio-div {
     background: rgba(255,255,255,.4);
+    font-size: 20px;
   }
 }
 
@@ -45,12 +56,8 @@
 
 .portfolio-h2 {
   vertical-align: top;
-  font-size: 30px;
 }
+
 .portfolio-h2::first-line {
   font-variant-caps: small-caps;
-  font-size: 32px;
-}
-.portfolio-div {
-  font-size: 20px;
 }

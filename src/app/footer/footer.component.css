@@ -2,8 +2,14 @@
     .footer-component {
         padding: 20px 0;
     }
+    .footer-component > div > a {
+        width: 15%;
+    }
     .footer-component > div > a > img {
         margin-top: -27px;
+    }
+    .footer-component > div > a > i {
+        font-size: 30px;
     }
 }
 
@@ -11,9 +17,16 @@
     .footer-component {
         padding: 60px 0;
     }
+    .footer-component > div > a {
+        width: 10%;
+    }
     .footer-component > div > a > img {
         margin-top: -17px;
     }
+    .footer-component > div > a > i {
+        font-size: 36px;
+    }
+    
 }
 
 .footer-component {
@@ -36,13 +49,11 @@
 .footer-component > div > a {
     display: inline-block;
     color: black;
-    width: 10%;
     text-align: center;
     font-size: 0px;
 }
 .footer-component > div > a > i {
     background-color: rgba(200, 200, 200);
-    font-size: 36px;
 }
 .footer-component > div > a > img {
     height: 48px;
