@@ -34,16 +34,18 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 export class PortfolioComponent implements OnInit {
 
-  // delayPortfolioH2 = false;
-  // delayPortfolioDiv = false;
-  delayPortfolioH2 = 'out';
-  delayPortfolioDiv = 'out';
+  delayPortfolioH2 = false;
+  delayPortfolioDiv = false;
+  // delayPortfolioH2 = 'out';
+  // delayPortfolioDiv = 'out';
 
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => this.delayPortfolioH2 = 'in', 1500);
-    setTimeout(() => this.delayPortfolioDiv = 'in', 2000);
+    setTimeout(() => this.delayPortfolioH2 = true, 1500);
+    setTimeout(() => this.delayPortfolioDiv = true, 2000);
+    // setTimeout(() => this.delayPortfolioH2 = 'in', 1500);
+    // setTimeout(() => this.delayPortfolioDiv = 'in', 2000);
   }
 
 
