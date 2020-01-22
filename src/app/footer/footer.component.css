@@ -6,7 +6,8 @@
         width: 15%;
     }
     .footer-component > div > a > img {
-        margin-top: -27px;
+        margin-top: -23px;
+        height: 40px;
     }
     .footer-component > div > a > i {
         font-size: 30px;
@@ -22,6 +23,7 @@
     }
     .footer-component > div > a > img {
         margin-top: -17px;
+        height: 48px;
     }
     .footer-component > div > a > i {
         font-size: 36px;
@@ -56,7 +58,4 @@
 }
 .footer-component > div > a > i {
     background-color: rgba(200, 200, 200);
-}
-.footer-component > div > a > img {
-    height: 48px;
 }
