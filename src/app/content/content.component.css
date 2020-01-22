@@ -4,13 +4,9 @@
     }
     .content-picture-section h1 {
         white-space: normal;
-        padding: 0 0 20px 20px;
     }
     .picture-links div {
         width: 20%;
-    }
-    .content-notes-section {
-        padding: 0 1%;
     }
 }
 
@@ -20,10 +16,7 @@
     }
     .picture-links div {
         width: 16%;
-        margin: 2%;
-    }
-    .content-notes-section {
-        padding: 0 1%;
+        margin: 2% 2% 0 2%;
     }
 }
 
@@ -89,6 +82,11 @@
      }
  }
 
+.content-notes-section {
+    padding: 0 2%;
+    width: 100%;
+}
+
 .arrow-up {
     width: 0;
     height: 0;
@@ -102,7 +100,7 @@
     display: block;  
     background-color: rgb(240,240,240);  
     border-radius: 5px;
-    padding: 10px;
+    padding: 2%;
     white-space: normal;
     font-family: 'adriane', Georgia, serif;
     font-size: 16px;

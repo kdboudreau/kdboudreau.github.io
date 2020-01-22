@@ -35,7 +35,7 @@ app-root {
 h1 {
 	display: block;
     width: 100%;
-    padding: 0 0 20px 0;
+    padding: 0 2% 20px 2%;
 	text-align: center;
 	color: #006D05;
 }

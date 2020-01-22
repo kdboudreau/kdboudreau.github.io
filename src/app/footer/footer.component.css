@@ -2,6 +2,9 @@
     .footer-component {
         padding: 20px 0;
     }
+    .footer-component h1 {
+        white-space: normal;
+    }
     .footer-component > div > a {
         width: 15%;
     }
