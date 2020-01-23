@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class ContentComponent implements OnInit {
   showNotes: boolean;
+  scrollPosition = 0;
   interestsText: string;
   selectedImage: string;
   iWORKOUTText = 'Working out is one of my favorite things to do. I really enjoy HIIT workouts, running (especially on chilly mornings), and spin classes. Working out is important to me because it helps me de-stress and relax.';
@@ -16,9 +17,30 @@ export class ContentComponent implements OnInit {
   craftyText = 'I love crafting. I am very passionate about making holiday decorations and creating a cozy home that we love to be in.';
   catLadyText = 'Cats are the best. I have two that are full of fur and cuteness. Plus, they are very quirky, like me!';
 
-  constructor() { }
 
   ngOnInit() {
+    const instance = this;
+    window.addEventListener('scroll', function(ev) {
+      window.requestAnimationFrame(function() {
+        instance.displayImages();
+      });
+    });
+  }
+
+  displayImages() {
+    const componentPosition = document.getElementById('portfolioDiv').offsetTop;
+    const scrollPosition = window.pageYOffset;
+    if (scrollPosition >= componentPosition) {
+      const nodes = document.getElementById('pictureLinks').getElementsByTagName('div');
+      for (let i = 0; i < nodes.length; i++) {
+        const element = document.getElementById('pictureLinks').children[i].children[0];
+        if (!element.classList.contains('load')) {
+          setTimeout(() => {
+            element.className += ' load';
+          }, (150 + (i * 300)));
+        }
+      }
+    }
   }
 
   onImageClick(selection) {
