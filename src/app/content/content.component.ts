@@ -36,7 +36,7 @@ export class ContentComponent implements OnInit {
         const element = document.getElementById('pictureLinks').children[i].children[0];
         if (!element.classList.contains('load')) {
           setTimeout(() => {
-            element.className += ' load';
+            element.className = 'picture-interests load';
           }, (150 + (i * 300)));
         }
       }
