@@ -18,10 +18,6 @@ export class ContentComponent implements OnInit {
   catLadyText = 'Cats are the best. I have two that are full of fur and cuteness. Plus, they are very quirky, like me!';
 
 
-  constructor(
-    public el: ElementRef
-  ) { }
-
   ngOnInit() {
     const instance = this;
     window.addEventListener('scroll', function(ev) {
@@ -32,7 +28,6 @@ export class ContentComponent implements OnInit {
   }
 
   displayImages() {
-    // const componentPosition = document.getElementById('contentDiv').offsetTop;
     const componentPosition = document.getElementById('portfolioDiv').offsetTop;
     const scrollPosition = window.pageYOffset;
     if (scrollPosition >= componentPosition) {
