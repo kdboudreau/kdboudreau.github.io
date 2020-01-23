@@ -1,4 +1,19 @@
 @media screen and (max-device-width: 600px) {
+  #headerComponentDiv {
+    display: block;
+    width: 100%;
+    height: 50vh;
+  }
+  .picture-self {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 58% 21.2367%;
+    text-align: left;
+  }
+  div {
+    height: 100%;
+  }
   .page-layout {
     width: 100%;
     height: 100%;
@@ -24,6 +39,9 @@
 }
 
 @media screen and (min-device-width: 601px) and (max-device-width: 900px) {
+  #headerComponentDiv {
+    display: none;
+  }
   .portfolio-h2 {
     margin-top: 50px;
     padding: 20px 30px;
@@ -39,6 +57,9 @@
 }
 
 @media screen and (min-device-width: 900px) {
+  #headerComponentDiv {
+    display: none;
+  }
   .portfolio-h2 {
     margin-top: 60px;
     padding: 30px 60px;
