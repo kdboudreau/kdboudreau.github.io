@@ -1,32 +1,64 @@
+@media screen and (max-device-width: 600px) {
+    .footer-component {
+        padding: 20px 0;
+    }
+    .footer-component h1 {
+        white-space: normal;
+    }
+    .footer-component > div > a {
+        width: 15%;
+    }
+    .footer-component > div > a > img {
+        margin-top: -23px;
+        height: 40px;
+    }
+    .footer-component > div > a > i {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-device-width: 601px) {
+    .footer-component {
+        padding: 60px 0;
+    }
+    .footer-component > div > a {
+        width: 10%;
+    }
+    .footer-component > div > a > img {
+        margin-top: -17px;
+        height: 48px;
+    }
+    .footer-component > div > a > i {
+        font-size: 36px;
+    }
+    
+}
+
 .footer-component {
     display: block;
+    background-color: rgba(200, 200, 200);
     font-size: 18px;
     text-align: center;
-    padding: 60px 0;
-    background: rgba(255, 255, 255, 0.5);
-    font-family: "Segoe Script", cursive;
+    font-family: "Segoe Script", "Lucida Handwriting", cursive;
 }
+
 .footer-component > div:first-child {
     display: block;
     width: 100%;
     text-align: center;
 }
+
 .footer-component > div {
     white-space: nowrap;
     font-size: 0px;
+    padding-top: 12px;
 }
 .footer-component > div > a {
     display: inline-block;
-    width: 10%;
-    margin: 0px 5%;
+    color: black;
     text-align: center;
     font-size: 0px;
 }
 .footer-component > div > a > i {
-    color: black;
-    font-size: 36px;
-}
-.footer-component > div > a > img {
-    height: 48px;
-    margin-top: -17px;
+    background-color: rgba(200, 200, 200);
 }
