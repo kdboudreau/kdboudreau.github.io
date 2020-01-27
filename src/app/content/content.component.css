@@ -5,9 +5,9 @@
     .content-picture-section h1 {
         white-space: normal;
     }
-    .picture-links div {
-        width: 20%;
-    }
+    /* .picture-links div { */
+        /* width: 20%; */
+    /* } */
 }
 
 @media screen and (min-device-width: 601px) {
@@ -15,23 +15,21 @@
         padding: 120px 0;
     }
     .picture-links div {
-        width: 16%;
+        /* width: 16%; */
         margin: 2% 2% 0 2%;
     }
 }
 
 .content-picture-section {
-    font-family: "Segoe Script", "Lucida Handwriting", cursive;
+    font-family: "Segoe Script", "Over the Rainbow", cursive;
     white-space: nowrap;
 }
 .picture-links {
-    display: block;
+    display: flex;
     width: 100%;
-    font-size: 0px;
 }
 .picture-links div {
     display: inline-block;
-    font-size: 0px;
 }
 .picture-interests {
     width: 100%;
