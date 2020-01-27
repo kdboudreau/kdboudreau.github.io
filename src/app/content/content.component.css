@@ -5,9 +5,9 @@
     .content-picture-section h1 {
         white-space: normal;
     }
-    .picture-links div {
-        width: 20%;
-    }
+    /* .picture-links div { */
+        /* width: 20%; */
+    /* } */
 }
 
 @media screen and (min-device-width: 601px) {
@@ -15,7 +15,7 @@
         padding: 120px 0;
     }
     .picture-links div {
-        width: 16%;
+        /* width: 16%; */
         margin: 2% 2% 0 2%;
     }
 }
