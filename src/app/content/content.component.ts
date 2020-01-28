@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 })
 
 export class ContentComponent implements OnInit {
+  showInterests: boolean;
   showNotes: boolean;
   scrollPosition = 0;
   interestsText: string;
@@ -25,10 +26,14 @@ export class ContentComponent implements OnInit {
         instance.displayImages();
       });
     });
+
+    setTimeout(() => this.showInterests = true, 2500);
+
   }
 
   displayImages() {
-    const componentPosition = document.getElementById('portfolioDiv').offsetTop;
+    const componentPosition = window.innerWidth <= 600 ?  document.getElementById('portfolioH2').offsetTop
+      : document.getElementById('portfolioDiv').offsetTop;
     const scrollPosition = window.pageYOffset;
     if (scrollPosition >= componentPosition) {
       const nodes = document.getElementById('pictureLinks').getElementsByTagName('div');
