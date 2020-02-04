@@ -1,21 +1,26 @@
-<div id="contentDiv" class="page-content">
+<div id="contentDiv" class="page-content" *ngIf="showInterests">
   <div class="content-picture-section">
     <h1>some of my interests include</h1>
     <div id="pictureLinks" class="picture-links">
       <div>
-        <img class="picture-interests" src="assets/images/BWKettlebells.jpg" (click)="onImageClick('iworkout')">
+        <img class="picture-interests" id="iworkout" src="assets/images/BWKettlebells.jpg" 
+          (click)="onImageClick('iworkout')">
       </div>
       <div>
-        <img class="picture-interests" src="assets/images/LaptopImage.jpg" (click)="onImageClick('iCode')">
+        <img class="picture-interests" id="iCode" src="assets/images/LaptopImage.jpg" 
+          (click)="onImageClick('iCode')">
       </div>
       <div>
-        <img class="picture-interests" src="assets/images/Cooking.jpg" (click)="onImageClick('yum')">
+        <img class="picture-interests" id="yum" src="assets/images/Cooking.jpg" 
+          (click)="onImageClick('yum')">
       </div>
       <div>
-        <img class="picture-interests" src="assets/images/Crafting.jpg" (click)="onImageClick('crafty')">
+        <img class="picture-interests" id="crafty" src="assets/images/Crafting.jpg" 
+          (click)="onImageClick('crafty')">
       </div>
       <div>
-        <img class="picture-interests" src="assets/images/Cat.jpg" (click)="onImageClick('catlady')">
+        <img class="picture-interests" id="catlady" src="assets/images/Cat.jpg" 
+          (click)="onImageClick('catlady')">
       </div>
     </div>
   </div>

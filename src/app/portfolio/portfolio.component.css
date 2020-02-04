@@ -2,7 +2,7 @@
   #headerComponentDiv {
     display: block;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
   }
   .picture-self {
     object-fit: cover;

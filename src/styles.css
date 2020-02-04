@@ -1,6 +1,6 @@
 @media screen and (max-device-width: 600px) {
 	h1 {
-		font-size: 28px;
+		font-size: 24px;
 		margin: 0px;
 	}
 	h2 {
@@ -10,7 +10,7 @@
 
 @media screen and (min-device-width: 601px) and (max-device-width: 900px) {
     h1 {
-		font-size: 32px;
+		font-size: 30px;
 	}
 }
 
@@ -38,4 +38,26 @@ h1 {
     padding: 0 2% 20px 2%;
 	text-align: center;
 	color: #006D05;
+}
+
+.interests-text-small {
+	width: 60% !important;
+	display: inline-block;
+	white-space: pre-wrap;
+    background-color: rgb(240,240,240);  
+    border-radius: 5px;
+    padding: 2%;
+    white-space: normal;
+    font-family: 'adriane', Georgia, serif;
+    font-size: 14px;
+}
+
+.interests-pic-small {
+	width: 40% !important;
+	display: inline-block;
+	vertical-align: top;
+}
+.interests-pic-full {
+	width: 100% !important;
+	display: block;
 }
