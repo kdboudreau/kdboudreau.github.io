@@ -41,12 +41,23 @@ h1 {
 }
 
 .interests-text-small {
-	width: 60%;
+	width: 60% !important;
 	display: inline-block;
 	white-space: pre-wrap;
+    background-color: rgb(240,240,240);  
+    border-radius: 5px;
+    padding: 2%;
+    white-space: normal;
+    font-family: 'adriane', Georgia, serif;
+    font-size: 14px;
 }
 
 .interests-pic-small {
-	width: 40%;
+	width: 40% !important;
 	display: inline-block;
+	vertical-align: top;
+}
+.interests-pic-full {
+	width: 100% !important;
+	display: block;
 }

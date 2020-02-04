@@ -77,6 +77,12 @@ export class ContentComponent implements OnInit {
         }
       }, 100);
     } else {
+      // for (let i = 0; i < 5; i++) {
+      //   const element = document.getElementById('pictureLinks').children[i];
+      //   if (element.children[1]) {
+      //     element.removeChild[1];
+      //   }
+      // }
       if (this.selectedImage === selection) {
         // TODO remove elements and reset
       } else {
@@ -100,7 +106,7 @@ export class ContentComponent implements OnInit {
         }
         node.appendChild(textNode);
         document.getElementById('pictureLinks').children[i].appendChild(node);
-        document.getElementById('pictureLinks').children[i].children[0].className = 'interests-pic-small';
+        document.getElementById('pictureLinks').children[i].children[0].className = 'interests-pic-small picture-interests load';
       }
       this.selectedImage = selection;
     }
