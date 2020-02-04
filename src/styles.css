@@ -39,3 +39,14 @@ h1 {
 	text-align: center;
 	color: #006D05;
 }
+
+.interests-text-small {
+	width: 60%;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+.interests-pic-small {
+	width: 40%;
+	display: inline-block;
+}

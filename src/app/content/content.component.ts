@@ -35,46 +35,74 @@ export class ContentComponent implements OnInit {
     const componentPosition = window.innerWidth <= 600 ?  document.getElementById('portfolioH2').offsetTop
       : document.getElementById('portfolioDiv').offsetTop;
     const scrollPosition = window.pageYOffset;
-    if (scrollPosition >= componentPosition) {
+    if (scrollPosition >= componentPosition
+      && !document.getElementById('pictureLinks').children[0].children[0].classList.contains('load')) {
       const nodes = document.getElementById('pictureLinks').getElementsByTagName('div');
       for (let i = 0; i < nodes.length; i++) {
         const element = document.getElementById('pictureLinks').children[i].children[0];
-        if (!element.classList.contains('load')) {
-          setTimeout(() => {
-            element.className = 'picture-interests load';
-          }, (150 + (i * 300)));
-        }
+        setTimeout(() => {
+          element.className = 'picture-interests load';
+        }, (150 + (i * 300)));
       }
     }
   }
 
   onImageClick(selection) {
-    if (this.showNotes === true && this.selectedImage === selection) {
-      this.showNotes = false;
-    } else {
-      this.showNotes = true;
-    }
-
-    this.selectedImage = selection;
-    setTimeout(() => {
-      if (this.showNotes === false) {
-        this.interestsText = '';
-      } else if (selection === 'iworkout') {
-        this.interestsText = this.iWORKOUTText;
-        document.getElementById('arrow-up').style.marginLeft = '8%';
-      } else if (selection === 'iCode') {
-        this.interestsText = this.iCodeText;
-        document.getElementById('arrow-up').style.marginLeft = '28%';
-      } else if (selection === 'yum') {
-        this.interestsText = this.yumText;
-        document.getElementById('arrow-up').style.marginLeft = '48%';
-      } else if (selection === 'crafty') {
-        this.interestsText = this.craftyText;
-        document.getElementById('arrow-up').style.marginLeft = '68%';
+    if (window.innerWidth > 600) {
+      if (this.showNotes === true && this.selectedImage === selection) {
+        this.showNotes = false;
       } else {
-        this.interestsText = this.catLadyText;
-        document.getElementById('arrow-up').style.marginLeft = '88%';
+        this.showNotes = true;
       }
-    }, 100);
+
+      this.selectedImage = selection;
+      setTimeout(() => {
+        if (this.showNotes === false) {
+          this.interestsText = '';
+        } else if (selection === 'iworkout') {
+          this.interestsText = this.iWORKOUTText;
+          document.getElementById('arrow-up').style.marginLeft = '8%';
+        } else if (selection === 'iCode') {
+          this.interestsText = this.iCodeText;
+          document.getElementById('arrow-up').style.marginLeft = '28%';
+        } else if (selection === 'yum') {
+          this.interestsText = this.yumText;
+          document.getElementById('arrow-up').style.marginLeft = '48%';
+        } else if (selection === 'crafty') {
+          this.interestsText = this.craftyText;
+          document.getElementById('arrow-up').style.marginLeft = '68%';
+        } else {
+          this.interestsText = this.catLadyText;
+          document.getElementById('arrow-up').style.marginLeft = '88%';
+        }
+      }, 100);
+    } else {
+      if (this.selectedImage === selection) {
+        // TODO remove elements and reset
+      } else {
+        const node = document.createElement('div');
+        node.className = 'interests-text-small';
+        let textNode, i = 0;
+        if (selection === 'iworkout') {
+          textNode = document.createTextNode(this.iWORKOUTText);
+        } else if (selection === 'iCode') {
+          textNode = document.createTextNode(this.iCodeText);
+          i = 1;
+        } else if (selection === 'yum') {
+          textNode = document.createTextNode(this.yumText);
+          i = 2;
+        } else if (selection === 'crafty') {
+          textNode = document.createTextNode(this.craftyText);
+          i = 3;
+        } else {
+          textNode = document.createTextNode(this.catLadyText);
+          i = 4;
+        }
+        node.appendChild(textNode);
+        document.getElementById('pictureLinks').children[i].appendChild(node);
+        document.getElementById('pictureLinks').children[i].children[0].className = 'interests-pic-small';
+      }
+      this.selectedImage = selection;
+    }
   }
 }
