@@ -51,12 +51,13 @@ export class ContentComponent implements OnInit {
     if (window.innerWidth > 600) {
       if (this.showNotes === true && this.selectedImage === selection) {
         this.showNotes = false;
+        this.selectedImage = '';
       } else {
         this.showNotes = true;
       }
 
-      this.selectedImage = selection;
       setTimeout(() => {
+        this.selectedImage = selection;
         if (this.showNotes === false) {
           this.interestsText = '';
         } else if (selection === 'iworkout') {
@@ -77,36 +78,40 @@ export class ContentComponent implements OnInit {
         }
       }, 100);
     } else {
-      // for (let i = 0; i < 5; i++) {
-      //   const element = document.getElementById('pictureLinks').children[i];
-      //   if (element.children[1]) {
-      //     element.removeChild[1];
-      //   }
-      // }
-      // if (!this.selectedImage === selection) {
-      //   const node = document.createElement('div');
-      //   node.className = 'interests-text-small';
-      //   let textNode, i = 0;
-      //   if (selection === 'iworkout') {
-      //     textNode = document.createTextNode(this.iWORKOUTText);
-      //   } else if (selection === 'iCode') {
-      //     textNode = document.createTextNode(this.iCodeText);
-      //     i = 1;
-      //   } else if (selection === 'yum') {
-      //     textNode = document.createTextNode(this.yumText);
-      //     i = 2;
-      //   } else if (selection === 'crafty') {
-      //     textNode = document.createTextNode(this.craftyText);
-      //     i = 3;
-      //   } else {
-      //     textNode = document.createTextNode(this.catLadyText);
-      //     i = 4;
-      //   }
-      //   node.appendChild(textNode);
-      //   document.getElementById('pictureLinks').children[i].appendChild(node);
-      //   document.getElementById('pictureLinks').children[i].children[0].className = 'interests-pic-small picture-interests load';
-      // }
-      this.selectedImage = selection;
+      for (let i = 0; i < 5; i++) {
+        const element = document.getElementById('pictureLinks').children[i];
+        if (element.children[1]) {
+          element.removeChild(element.children[1]);
+          element.children[0].className = 'picture-interests load';
+        }
+      }
+      if (this.selectedImage !== selection) {
+        const node = document.createElement('div');
+        node.className = 'interests-text-small';
+        let textNode, i = 0;
+        if (selection === 'iworkout') {
+          textNode = document.createTextNode(this.iWORKOUTText);
+        } else if (selection === 'iCode') {
+          textNode = document.createTextNode(this.iCodeText);
+          i = 1;
+        } else if (selection === 'yum') {
+          textNode = document.createTextNode(this.yumText);
+          i = 2;
+        } else if (selection === 'crafty') {
+          textNode = document.createTextNode(this.craftyText);
+          i = 3;
+        } else {
+          textNode = document.createTextNode(this.catLadyText);
+          i = 4;
+        }
+        node.appendChild(textNode);
+        document.getElementById('pictureLinks').children[i].appendChild(node);
+        document.getElementById('pictureLinks').children[i].children[0].className = 'interests-pic-small picture-interests load';
+        this.selectedImage = selection;
+      } else {
+        this.selectedImage = '';
+      }
+
     }
   }
 }
