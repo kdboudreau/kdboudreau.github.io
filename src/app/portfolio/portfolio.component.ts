@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, AfterViewInit } from '@angular/core';
 import { trigger, transition, animate, style, state } from '@angular/animations';
 
 @Component({
@@ -20,14 +20,14 @@ import { trigger, transition, animate, style, state } from '@angular/animations'
   ]
 })
 
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements AfterViewInit  {
 
   delayPortfolioH2 = false;
   delayPortfolioDiv = false;
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     setTimeout(() => this.delayPortfolioH2 = true, 1500);
     setTimeout(() => this.delayPortfolioDiv = true, 2300);
   }
